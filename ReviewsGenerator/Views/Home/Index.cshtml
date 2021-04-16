@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">xxx</a>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+
+
+    @Html.ActionLink(
+    "Click Here to Generate a Review!",
+    "GenerateReview", // action method
+    "Review",   // controller
+    null)
+
+    <div>This UI is not too good. Just use postman. (HTTPGet api/reviews/generate)</div>
+    <!---<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>-->
+</div>
+
+<div id="reviewResult">
+
+</div>
