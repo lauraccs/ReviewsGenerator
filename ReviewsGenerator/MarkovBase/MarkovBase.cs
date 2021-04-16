@@ -90,7 +90,7 @@ namespace ReviewsGenerator.MarkovBase
             //returns number between 0 and 1
             //generate star rating / overall based on positive probability
             var positiveProbability = sentimentClassifier.PositiveProbability(sentiment);
-            review.Overall = Math.Round((positiveProbability * 10) / 2) > 1 ? Math.Round((positiveProbability * 10) / 2) : 1;
+            review.Overall = Math.Round((positiveProbability * 10) / 2) >= 1 ? Math.Round((positiveProbability * 10) / 2) : 1;
 
             var helpful = HelpfulList.ElementAt(random.Next(HelpfulList.Count));
             review.ReviewTime = string.Join(" ", ReviewTimeChain.Chain(random));
